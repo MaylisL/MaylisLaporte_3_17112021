@@ -1,5 +1,39 @@
 body {
-  background-color: black;
+  margin: 0;
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+}
+.header__logo {
+  width: 15%;
+}
+
+.localisation {
+  background-color: #e5e5e5;
+}
+
+.intro {
+  background-color: #f4f4f4;
+}
+
+.footer {
+  background-color: #282828;
+  color: #ffffff;
+  font-family: roboto;
+  font-size: 12px;
+}
+.footer__box {
+  display: flex;
+  row-gap: 10%;
+}
+.footer__logo {
+  font-family: shrikhand;
 }
 
 /*# sourceMappingURL=style.css.map */

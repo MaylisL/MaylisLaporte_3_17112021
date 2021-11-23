@@ -1,3 +1,37 @@
-body {
-    background-color: black;
+@import "colors";
+@import "reset";
+
+main {
+    max-width: 1440px;
+    margin: auto;
+}
+.header {
+    text-align: center;
+    
+    &__logo {
+       width: 15%;
+    }
+}
+
+.localisation {
+    background-color: $dark-grey;
+}
+.intro {
+    background-color: $grey;
+}
+.footer {
+    background-color: $darkest-grey;
+    color:#ffffff;
+    font-family: roboto;
+    font-size: 12px;
+
+    &__box{
+        display: flex;
+        row-gap: 10%;
+    }
+
+    &__logo {
+        font-family: shrikhand;
+    }
+
 }

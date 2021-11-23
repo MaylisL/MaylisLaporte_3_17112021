@@ -9,118 +9,126 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6daba08427.js" crossorigin="anonymous"></script>
         <title>Oh My Food!</title>
     </head>
     <body>
-        <header>
-            <img src="images/logo/ohmyfood.png" alt="logo de ohmyfood en noir">
+        <header class="header">
+            <img src="images/logo/ohmyfood.png" alt="logo de ohmyfood en noir" class="header__logo">
         </header>
         <main>
             <div class="localisation">
-                <i></i>
-                <span>Paris, Belleville</span>
+                <i class="fas fa-map-marker-alt localisation__icon"></i>
+                <span class="localisation__text">Paris, Belleville</span>
             </div>
             <section class="intro">
                 <h1></h1>
                 <p></p>
-                <button>
+                <button class="intro__button">
                     <span></span>
                 </button>
             </section>
             <section class="fonctionnement">
                 <h2></h2>
-                <div class="flex">
-                   <div class="fonctionnement_step">
-                        <div>
+                   <div class="step">
+                        <div  class="fonctionnement__step__number">
                             <span></span>
                         </div>
-                        <div>
-                            <i></i>
-                            <span></span>
+                        <div  class="fonctionnement__step__box">
+                            <i class="fas fa-mobile-alt fonctionnement__step__icon"></i>
+                            <span class="fonctionnement__step__text"></span>
                         </div>
                     </div>
-                    <div class="fonctionnement_step">
-                        <div>
+                    <div class="fonctionnement__step">
+                        <div  class="fonctionnement__step__number">
                             <span></span>
                         </div>
-                        <div>
-                            <i></i>
-                            <span></span>
+                        <div  class="fonctionnement__step__box">
+                            <i class="fas fa-list-ul fonctionnement__step__icon"></i>
+                            <span class="fonctionnement__step__text"></span>
                         </div>
                     </div> 
-                    <div class="fonctionnement_step">
-                        <div>
+                    <div class="fonctionnement__step">
+                        <div class="fonctionnement__step__number">
                             <span></span>
                         </div>
-                        <div>
-                            <i></i>
-                            <span></span>
+                        <div class="fonctionnement__step__box fonctionnement__step__box--pink">
+                            <i class="fas fa-store fonctionnement__step__icon"></i>
+                            <span class="fonctionnement__step__text"></span>
                         </div>
                     </div>  
-                </div>   
             </section>
             <section class="restaurants">
                 <div class="restaurants_flex">
-                    <article class="restaurants_card">
-                        <div class="restaurants_card_image"> 
+                    <article class="restaurants-card">
+                        <div class="restaurants-card__image"> 
                             <img src="" alt="">
                         </div>
-                        <div class="restaurants_card_body"> 
-                           <h3></h3> 
-                           <h4></h4>
-                           <div>
-                               <button>
-                                   <i></i>
-                               </button>
-                           </div>
+                        <div class="restaurants-card__body"> 
+                            <h3></h3> 
+                            <span></span>
+                            <div>
+                                <button>
+                                   <i class="far fa-heart restaurants-card__body__icon"></i>
+                                </button>
+                            </div>
                         </div>
                     </article>
-                    <article class="restaurants_card">
-                        <div class="restaurants_card_image"> 
+                    <article class="restaurants-card">
+                        <div class="restaurants-card__image"> 
                             <img src="" alt="">
                         </div>
-                        <div class="restaurants_card_body"> 
-                           <h3></h3> 
-                           <h4></h4>
-                           <i></i>
+                        <div class="restaurants-card__body"> 
+                            <h3></h3> 
+                            <span></span>
+                            <div>
+                                <button>
+                                    <i class="far fa-heart restaurants-card__body__icon"></i>
+                                </button>
                         </div>
                     </article>
-                    <article class="restaurants_card">
-                        <div class="restaurants_card_image"> 
+                    <article class="restaurants-card">
+                        <div class="restaurants-card__image"> 
                             <img src="" alt="">
                         </div>
-                        <div class="restaurants_card_body"> 
-                           <h3></h3> 
-                           <h4></h4>
-                           <i></i>
+                        <div class="restaurants-card__body"> 
+                            <h3></h3> 
+                            <span></span>
+                            <div>
+                                <button>
+                                    <i class="far fa-heart restaurants-card__body__icon"></i>
+                                </button>
                         </div>
                     </article>
-                    <article class="restaurants_card">
-                        <div class="restaurants_card_image"> 
+                    <article class="restaurants-card">
+                        <div class="restaurants-card__image"> 
                             <img src="" alt="">
                         </div>
-                        <div class="restaurants_card_body"> 
-                           <h3></h3> 
-                           <h4></h4>
-                           <i></i>
+                        <div class="restaurants-card__body"> 
+                            <h3></h3> 
+                            <span></span>
+                            <div>
+                                <button>
+                                    <i class="far fa-heart restaurants-card__body__icon"></i>
+                                </button>
                         </div>
                     </article>
                 </div>
             </section>
         </main>
-        <footer>
-            <span></span>
-            <div>
-                <i></i>
-                <h5></h5>
+        <footer class="footer">
+            <span class="footer__logo">Ohmyfood</span>
+            <div class="footer__box">
+                <i class="fas fa-utensils footer__icon"></i>
+                <span class="footer__text">Proposer un restaurant</span>
             </div>
-            <div>
-                <i></i>
-                <h5></h5>
+            <div class="footer__box">
+                <i class="fas fa-hands-helping footer__icon"></i>
+                <span class="footer__text">Devenir partenaire</span>
             </div>
-            <h5></h5>
+                <span class="footer__text">Mentions légales</span>
             <div class="contact">
-                <h5></h5>
+                <span class="footer__text">Contact</span>
             </div>
         </footer>
     </body>
