@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixins";
+
+
+.header {
+    @include maxwidth;
+    @include pding;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+    &__logo {
+       width: 50%;
+    }
+}
+.restaurant {
+    @include pding; 
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+        @include btn-style;
+        width:50% ; 
+        align-content: center;
+        align-items: center;
+    }
+}
+.mealbox {
+    &__title {
+        border-bottom: $tertiary medium solid ;
+    }
+}
+.meal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__choice {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        border-radius: 15px;
+        box-shadow: 0 3px 10px #c4c3c3;
+
+        background-color: $grey;
+    
+    }
+}

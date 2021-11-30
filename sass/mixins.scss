@@ -4,10 +4,10 @@
 }
 
 @mixin btn-style {
-    padding: 10px 12px;
-    border: $secondary solid 2px;
-    border-radius: 20px;
-    background-color: $secondary;
+    padding: 15px 20px;
+    border:none;
+    border-radius: 25px;
+    background: linear-gradient(165deg,$secondary,$primary);
     color: #ffffff;
     font-weight: bold;
 }
@@ -18,3 +18,5 @@
 @mixin pding-ctnr {
     padding: 25px 5%; 
 }
+//  background-color: $secondary;//
+// border: $secondary solid 2px; //
