@@ -17,6 +17,8 @@
     @include pding; 
     display: flex;
     flex-direction: column;
+    background-color: $grey;
+    border-radius: 60px 60px 0px 0px;
 
     &__button {
         @include btn-style;
@@ -25,29 +27,60 @@
         align-items: center;
     }
 }
-.mealbox {
-    &__title {
-        border-bottom: $tertiary medium solid ;
-    }
+.mealbox__title {
+    position: relative;
 }
+.mealbox__title::after {
+    content: "";
+    background-color: $tertiary;
+    height: 4px;
+    width: 61px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
 .meal {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     &__choice {
-        width: 100%;
+        width: 357px;
         height: 70px;
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        align-items: center;
         padding-left: 10px;
-        padding-right: 10px;
+        overflow:hidden; 
 
         border-radius: 15px;
         box-shadow: 0 3px 10px #c4c3c3;
-
-        background-color: $grey;
-    
+       
+        &__text {
+            width: 100%;
+            align-self: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        }
+        &__price {
+            width: 50px;
+            align-self: flex-end;
+            padding-bottom: 15px;
+        }
     }
+}
+.animation {
+    width: 0px;
+    
+}
+.meal__choice:hover .animation {
+    width: 100px;
+    transition: width .5s ease-in-out;
+    background-color: $tertiary;
+    &__icon {
+        color: white;
+    }   
 }

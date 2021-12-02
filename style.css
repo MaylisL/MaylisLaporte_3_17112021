@@ -25,6 +25,8 @@ a {
   padding-right: 5%;
   display: flex;
   flex-direction: column;
+  background-color: #f4f4f4;
+  border-radius: 60px 60px 0px 0px;
 }
 .restaurant__button {
   padding: 15px 20px;
@@ -39,7 +41,17 @@ a {
 }
 
 .mealbox__title {
-  border-bottom: #99E2D0 medium solid;
+  position: relative;
+}
+
+.mealbox__title::after {
+  content: "";
+  background-color: #99E2D0;
+  height: 4px;
+  width: 61px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
 }
 
 .meal {
@@ -48,16 +60,40 @@ a {
   gap: 20px;
 }
 .meal__choice {
-  width: 100%;
+  width: 357px;
   height: 70px;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
   padding-left: 10px;
-  padding-right: 10px;
+  overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 3px 10px #c4c3c3;
-  background-color: #f4f4f4;
+}
+.meal__choice__text {
+  width: 100%;
+  align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__choice__price {
+  width: 50px;
+  align-self: flex-end;
+  padding-bottom: 15px;
+}
+
+.animation {
+  width: 0px;
+}
+
+.meal__choice:hover .animation {
+  width: 100px;
+  transition: width 0.5s ease-in-out;
+  background-color: #99E2D0;
+}
+.meal__choice:hover .animation__icon {
+  color: white;
 }
 
 body {
