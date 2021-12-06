@@ -4,19 +4,35 @@
 }
 
 @mixin btn-style {
+    position: relative;
+    z-index: 1;
     padding: 15px 20px;
     border:none;
+    box-shadow: 2px 2px 5px  #a9a9a9;
     border-radius: 25px;
     background: linear-gradient(165deg,$secondary,$primary);
     color: #ffffff;
     font-weight: bold;
+   
+}
+@mixin btn-style-after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;  
+    left: 0;
+    border-radius: 25px;
+    background: linear-gradient(165deg, lighten($secondary,5%), lighten($primary,5%));
+    box-shadow: 3px 3px 8px #969696;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
 }
 @mixin pding {
-    padding-left: 5%;
-    padding-right: 5%; 
+    padding-inline: 3%;
 }
+
 @mixin pding-ctnr {
     padding: 25px 5%; 
 }
-//  background-color: $secondary;//
-// border: $secondary solid 2px; //

@@ -13,13 +13,15 @@
         <title>Oh My Food!</title>
     </head>
     <body>
-        <header>
-            <img src="images/logo/ohmyfood.png" alt="logo de ohmyfood en noir" class="header__image">
-            <i class="fas fa-arrow-left header__icon"></i>
+        <header class="header__menu">
+            <i class="fas fa-arrow-left header__menu__icon"></i>
+            <div class="header__menu__image">
+                <img src="../images/logo/ohmyfood.png" alt="logo de ohmyfood en noir">
+            </div>
         </header>
         <main>
-            <section>
-                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="deux assiettes sur une table du restaurant">
+            <section class="main__image">
+                <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="deux assiettes sur une table du restaurant">
             </section>
             <section class="restaurant">
                 <div class="restaurant__identity">
@@ -107,9 +109,9 @@
                                 </div>
                                 <div class="meal__choice__price">
                                     <span>44€</span>
-                                    <div class="animation">
-                                        <i class="fas fa-check-circle animation__icon"></i>
-                                    </div>
+                                </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
                                 </div>
                             </div>
                         </div> 
@@ -155,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-            </div>
+                </div>
                 <button class="restaurant__button">
                     <span>Commander</span>
                 </button>

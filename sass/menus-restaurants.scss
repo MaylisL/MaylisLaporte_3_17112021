@@ -1,30 +1,76 @@
 @import "variables";
 @import "mixins";
 
-
-.header {
+.header__menu {
     @include maxwidth;
     @include pding;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
-    
-    &__logo {
+    padding-top: 10px;
+    align-items: center;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    font-size: 20px;
+   
+    &__image {
        width: 50%;
+       & img {
+           width: 100%;
+       }
+    }
+}
+main {
+    background-color: #f4f4f4;
+}
+.main__image {
+    width : 100%;
+    height: auto;
+    img {
+        width: 100%;
+        object-fit: cover;
     }
 }
 .restaurant {
     @include pding; 
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: -60px;
+    gap: 30px;
     background-color: $grey;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 40px 40px 0px 0px;
+    
+
+    &__identity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        &__name {
+        font-family: $skd;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        
+        gap: 30px;
+    }
 
     &__button {
         @include btn-style;
         width:50% ; 
-        align-content: center;
-        align-items: center;
+        align-self: center;
+        &:hover {
+            &::after {
+                opacity:1;
+            }
+        }
+        &::after {
+            @include btn-style-after;
+        }
     }
 }
 .mealbox__title {
@@ -43,10 +89,17 @@
 .meal {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+
+    &__description {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
     &__choice {
-        width: 357px;
+        min-width: 330px;
+        width: auto;
         height: 70px;
         display: flex;
         flex-wrap: nowrap;
@@ -56,6 +109,8 @@
 
         border-radius: 15px;
         box-shadow: 0 3px 10px #c4c3c3;
+
+        background-color: #ffffff;
        
         &__text {
             width: 100%;
@@ -70,17 +125,32 @@
             align-self: flex-end;
             padding-bottom: 15px;
         }
+        
     }
 }
 .animation {
     width: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+    
+    background-color: $tertiary;
+    transition: width 0.6s ease-in-out;
+
+    &__icon {
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        transition: transform 0s ease-in-out;
+    }
     
 }
 .meal__choice:hover .animation {
     width: 100px;
-    transition: width .5s ease-in-out;
-    background-color: $tertiary;
+    transition: width .6s ease-in-out;
+    
     &__icon {
-        color: white;
+        transform: rotate(1turn);
+        transition: transform 0.3s ease-in-out;
     }   
 }
