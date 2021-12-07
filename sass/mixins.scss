@@ -36,3 +36,36 @@
 @mixin pding-ctnr {
     padding: 25px 5%; 
 }
+@mixin icon-regular {
+    z-index: 2;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    color: grey;
+    font-size: 24px;
+}
+
+@mixin icon-modified {
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color:transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient($grey 0%,$grey 50%,$secondary 50%,$primary 100%);
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+    font-size: 24px; 
+}
+
+@mixin icon-modified-hover {
+    animation-duration: 1s;
+    animation-name: fillup;
+    animation-fill-mode: forwards;
+}
+
+@mixin delay {
+    transform: translateY(-100px);
+    animation: transform 0.5s 1;
+}

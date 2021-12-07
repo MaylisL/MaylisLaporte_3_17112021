@@ -46,9 +46,31 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    
+
         &__name {
         font-family: $skd;
+        }
+
+        &__icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+
+            &__regular {
+                @include icon-regular;
+            }
+            &__modified {
+                @include icon-modified;
+            }
+            &:hover &__modified {
+                @include icon-modified-hover;
+            }
+            @keyframes fillup {
+                0% { background-position: 0% 0%;}
+                100% { 
+                    background-position: 0% 100%;
+                }
+            }  
         }
     }
 
@@ -75,12 +97,14 @@ main {
 }
 .mealbox__title {
     position: relative;
+    font-size: 17px;
+    font-weight: 400;
 }
 .mealbox__title::after {
     content: "";
     background-color: $tertiary;
     height: 4px;
-    width: 61px;
+    width: 43px;
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -90,6 +114,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-top: 20px;
 
     &__description {
         text-overflow: ellipsis;
@@ -128,6 +153,9 @@ main {
         
     }
 }
+//.delay1 {
+   //@include delay;
+//}
 .animation {
     width: 0px;
     text-align: center;

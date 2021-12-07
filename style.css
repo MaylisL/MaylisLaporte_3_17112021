@@ -63,6 +63,45 @@ main {
 .restaurant__identity__name {
   font-family: shrikhand;
 }
+.restaurant__identity__icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.restaurant__identity__icon__regular {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  color: grey;
+  font-size: 24px;
+}
+.restaurant__identity__icon__modified {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: linear-gradient(#f4f4f4 0%, #f4f4f4 50%, #FF79DA 50%, #9356DC 100%);
+  background-size: 100% 200%;
+  background-position: 0% 0%;
+  font-size: 24px;
+}
+.restaurant__identity__icon:hover .restaurant__identity__icon__modified {
+  animation-duration: 1s;
+  animation-name: fillup;
+  animation-fill-mode: forwards;
+}
+@keyframes fillup {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
 .restaurant__flex {
   display: flex;
   flex-direction: column;
@@ -101,13 +140,15 @@ main {
 
 .mealbox__title {
   position: relative;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .mealbox__title::after {
   content: "";
   background-color: #99E2D0;
   height: 4px;
-  width: 61px;
+  width: 43px;
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -117,6 +158,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: 20px;
 }
 .meal__description {
   text-overflow: ellipsis;
@@ -356,9 +398,9 @@ main {
 }
 
 .card {
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 2px 2px 5px #a9a9a9;
-  height: 250px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -376,11 +418,30 @@ main {
   width: 100%;
   height: 100%;
 }
+.card__after {
+  position: relative;
+}
+.card__after::after {
+  content: "Nouveau";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #126e49;
+  text-align: center;
+}
 .card__body {
   height: 30%;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px 10px 15px;
+  align-items: center;
+  padding-inline: 20px;
 }
 .card__body__text {
   display: flex;
@@ -391,21 +452,22 @@ main {
 .card__body__icon {
   position: relative;
   width: 24px;
+  height: 24px;
 }
 .card__body__icon__regular {
-  color: grey;
-  font-size: 24px;
   z-index: 2;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
   background: transparent;
+  color: grey;
+  font-size: 24px;
 }
 .card__body__icon__modified {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
   z-index: 1;
   background-image: linear-gradient(#f4f4f4 0%, #f4f4f4 50%, #FF79DA 50%, #9356DC 100%);

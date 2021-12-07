@@ -175,9 +175,9 @@ main {
     }
 }
 .card {
-        border-radius: 20px;
+        border-radius: 15px;
         box-shadow: 2px 2px 5px  #a9a9a9;
-        height: 250px;
+        height: 280px;
         display: flex;
         flex-direction: column;
         flex-wrap:wrap;
@@ -190,17 +190,40 @@ main {
         
         &__image {
             height:70%;
+
             img {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;   
             }
         }
+        &__after {
+            position: relative;
+           
+            &::after {
+
+            content: "Nouveau";
+            position: absolute;
+            right:10px;
+            top: 10px;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            background-color: $tertiary;
+            border-radius: 2px;
+            font-size: 15px;
+            font-weight: 500;
+            color:#126e49;
+            text-align: center;
+             
+            }
+        }
         &__body {
             height:30%;
             display: flex;
             justify-content: space-between;
-            padding: 15px 20px 10px 15px;
+            align-items: center;
+            padding-inline: 20px;
             
             &__text {
                 display: flex;
@@ -211,32 +234,16 @@ main {
             &__icon {
                 position: relative;
                 width: 24px;
+                height: 24px;
 
                 &__regular {
-                    color: grey;
-                    font-size: 24px;
-                    z-index: 2;
-                    position:absolute;
-                    top: 10px;
-                    left: 0;
-                    background: transparent;
+                    @include icon-regular;
                 }
                 &__modified {
-                    -webkit-background-clip: text; 
-                    -webkit-text-fill-color:transparent;
-                    position: absolute;
-                    top: 10px;
-                    left: 0;
-                    z-index: 1;
-                    background-image: linear-gradient($grey 0%,$grey 50%,$secondary 50%,$primary 100%);
-                    background-size: 100% 200%;
-                    background-position: 0% 0%;
-                    font-size: 24px; 
+                    @include icon-modified;
                 }
                 &:hover &__modified {
-                    animation-duration: 1s;
-                    animation-name: fillup;
-                    animation-fill-mode: forwards;
+                    @include icon-modified-hover;
                 }
                 @keyframes fillup {
                     0% { background-position: 0% 0%;}

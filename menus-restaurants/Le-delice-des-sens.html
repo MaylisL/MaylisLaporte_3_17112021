@@ -13,13 +13,17 @@
         <title>Oh My Food!</title>
     </head>
     <body>
-        <header>
-            <img src="images/logo/ohmyfood.png" alt="logo de ohmyfood en noir" class="header__image">
-            <i class="fas fa-arrow-left header__icon"></i>
+        <header class="header__menu">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left header__menu__icon"></i>
+            </a>
+            <div class="header__menu__image">
+                <img src="../images/logo/ohmyfood.png" alt="logo de ohmyfood en noir">
+            </div>
         </header>
         <main>
-            <section>
-                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="deux assiettes sur une table du restaurant">
+            <section class="main__image">
+                <img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="deux assiettes sur une table du restaurant">
             </section>
             <section class="restaurant">
                 <div class="restaurant__identity">
@@ -43,6 +47,9 @@
                                 <div class="meal__choice__price">
                                     <span>25€</span>
                                 </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
+                                </div>
                             </div>
                             <div  class="meal__choice">
                                 <div class="meal__choice__text">
@@ -52,6 +59,9 @@
                                 <div class="meal__choice__price">
                                     <span>35€</span>
                                 </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
+                                </div>
                             </div>
                             <div  class="meal__choice">
                                 <div class="meal__choice__text">
@@ -60,6 +70,9 @@
                                 </div>
                                 <div class="meal__choice__price">
                                     <span>20€</span>
+                                    <div class="animation">
+                                        <i class="fas fa-check-circle animation__icon"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>     
@@ -75,6 +88,9 @@
                                 <div class="meal__choice__price">
                                     <span>40€</span>
                                 </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
+                                </div>
                             </div> 
                             <div  class="meal__choice">
                                 <div class="meal__choice__text">
@@ -84,6 +100,9 @@
                                 <div class="meal__choice__price">
                                     <span>35€</span>
                                 </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
+                                </div>
                             </div>
                             <div  class="meal__choice">
                                 <div class="meal__choice__text">
@@ -92,6 +111,9 @@
                                 </div>
                                 <div class="meal__choice__price">
                                     <span>44€</span>
+                                </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
                                 </div>
                             </div>
                         </div> 
@@ -107,6 +129,9 @@
                                 <div class="meal__choice__price">
                                     <span>18€</span>
                                 </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
+                                </div>
                             </div>
                             <div  class="meal__choice">
                                 <div class="meal__choice__text">
@@ -115,6 +140,9 @@
                                 </div>
                                 <div class="meal__choice__price">
                                     <span>22€</span>
+                                </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
                                 </div>
                             </div>
                             <div  class="meal__choice">
@@ -125,10 +153,13 @@
                                 <div class="meal__choice__price">
                                     <span>23€</span>
                                 </div>
+                                <div class="animation">
+                                    <i class="fas fa-check-circle animation__icon"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-            </div>
+                </div>
                 <button class="restaurant__button">
                     <span>Commander</span>
                 </button>
@@ -136,19 +167,21 @@
         </main>
         <footer class="footer">
             <span class="footer__logo">Ohmyfood</span>
-            <div class="footer__box">
-                <i class="fas fa-utensils footer__icon"></i>
-                <span class="footer__text">Proposer un restaurant</span>
-            </div>
-            <div class="footer__box">
-                <div class="footer__icon">
-                    <i class="fas fa-hands-helping "></i>
-                </div>
-                <span class="footer__text">Devenir partenaire</span>
-            </div>
-                <span class="footer__text">Mentions légales</span>
-            <div class="contact">
-                <span class="footer__text">Contact</span>
-            </div>
+            <ul class="footer__wrapper">
+                <li class="footer__box">
+                    <i class="fas fa-utensils footer__icon"></i>
+                    <p class="footer__text">Proposer un restaurant</p>
+                </li>
+                <li class="footer__box">
+                    <i class="fas fa-hands-helping footer__icon"></i>
+                    <span class="footer__text">Devenir partenaire</span>  
+                </li>
+                <li class="footer__text">
+                    Mentions légales 
+                </li>
+                <li class="contact">
+                    <a href="mailto:contact@ohmyfood.fake" class="footer__text">contact</a>
+                </li>
+            </ul>
         </footer>
     </body>
