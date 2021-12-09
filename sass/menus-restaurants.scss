@@ -3,17 +3,17 @@
 
 .header__menu {
     @include maxwidth;
-    @include pding;
-    padding-top: 10px;
+    padding-inline: 5%;
+    padding-top: 4%;
     align-items: center;
-    height: 50px;
+    height: 52px;
     display: flex;
     justify-content: flex-start;
-    gap: 60px;
-    font-size: 20px;
+    grid-gap: 20%;
+    font-size: 1.25em;
    
     &__image {
-       width: 50%;
+       width: 48%;
        & img {
            width: 100%;
        }
@@ -31,13 +31,14 @@ main {
     }
 }
 .restaurant {
-    @include pding; 
+    @include pding;
+    padding-top: 2%; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     position: relative;
     top: -60px;
-    gap: 30px;
+    //gap: 30px;
     background-color: $grey;
     border-radius: 40px 40px 0px 0px;
     
@@ -46,9 +47,11 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include pding;
 
         &__name {
         font-family: $skd;
+        font-size: 20px;
         }
 
         &__icon {
@@ -58,15 +61,23 @@ main {
 
             &__regular {
                 @include icon-regular;
+                opacity:1;
             }
             &__modified {
                 @include icon-modified;
+                opacity: 0;
             }
             &:hover &__modified {
                 @include icon-modified-hover;
+                opacity:1;
+            }
+            &:hover &__regular {
+                opacity:0;
             }
             @keyframes fillup {
-                0% { background-position: 0% 0%;}
+                0% { 
+                    background-position: 0% 0%;
+                }
                 100% { 
                     background-position: 0% 100%;
                 }
@@ -77,14 +88,14 @@ main {
     &__flex {
         display: flex;
         flex-direction: column;
-        
         gap: 30px;
     }
 
     &__button {
         @include btn-style;
-        width:50% ; 
+        margin-top: 15%;
         align-self: center;
+        
         &:hover {
             &::after {
                 opacity:1;
@@ -95,37 +106,47 @@ main {
         }
     }
 }
-.mealbox__title {
-    position: relative;
-    font-size: 17px;
-    font-weight: 400;
-}
-.mealbox__title::after {
-    content: "";
-    background-color: $tertiary;
-    height: 4px;
-    width: 43px;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
+.mealbox {
+    &__title {
+        position: relative;
+        font-size: $large;
+        font-weight: 400;
+        padding-inline: 3%;
+
+        &::after {
+        content: "";
+        background-color: $tertiary;
+        height: 4px;
+        width: 45px;
+        position: absolute;
+        bottom: -4px;
+        left: 3%;
+        }
+    }
 }
 
 .meal {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     margin-top: 20px;
 
-    &__description {
-        text-overflow: ellipsis;
+    &__name {
         white-space: nowrap;
         overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__choice {
-        min-width: 330px;
-        width: auto;
-        height: 70px;
+        //min-width: 320px;
+        //width: auto;
+        height: 75px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -138,12 +159,12 @@ main {
         background-color: #ffffff;
        
         &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
             width: 100%;
             align-self: center;
-            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
-            
         }
         &__price {
             width: 50px;
@@ -153,14 +174,33 @@ main {
         
     }
 }
-//.delay1 {
-   //@include delay;
-//}
+.delay {
+    &__1 {
+        @include moving;
+        animation-delay: 0.5s;
+    }
+    &__2 {
+        @include moving;
+        animation-delay: 1.2s;
+    }
+    &__3 {
+        @include moving;
+        animation-delay: 1.7s;
+    }
+}
+
+@keyframes move {
+    0% {transform:translateY(80px);
+    opacity: 0;}
+    //50% {opacity:1;}
+    100% {transform:translateY(0px);
+    opacity:1;}
+}
 .animation {
     width: 0px;
     text-align: center;
     vertical-align: middle;
-    line-height: 70px;
+    line-height: 75px;
     
     background-color: $tertiary;
     transition: width 0.6s ease-in-out;
@@ -169,6 +209,7 @@ main {
         text-align: center;
         vertical-align: middle;
         color: white;
+        font-size: 25px;
         transition: transform 0s ease-in-out;
     }
     
@@ -179,6 +220,6 @@ main {
     
     &__icon {
         transform: rotate(1turn);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.4s ease-in-out;
     }   
 }

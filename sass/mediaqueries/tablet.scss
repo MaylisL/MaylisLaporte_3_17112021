@@ -1,7 +1,16 @@
 @media screen and (min-width:768px) {
+    body {
+        width: 100%;
+    }
     .restaurant {
         &__flex {
             flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+    .meal {
+        &__choice {
+            min-width: 200px;
         }
     }
 }

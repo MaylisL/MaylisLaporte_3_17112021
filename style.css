@@ -15,17 +15,17 @@ ul {
 .header__menu {
   max-width: 1440px;
   margin: auto;
-  padding-inline: 3%;
-  padding-top: 10px;
+  padding-inline: 5%;
+  padding-top: 4%;
   align-items: center;
-  height: 50px;
+  height: 52px;
   display: flex;
   justify-content: flex-start;
-  gap: 60px;
-  font-size: 20px;
+  grid-gap: 20%;
+  font-size: 1.25em;
 }
 .header__menu__image {
-  width: 50%;
+  width: 48%;
 }
 .header__menu__image img {
   width: 100%;
@@ -46,12 +46,12 @@ main {
 
 .restaurant {
   padding-inline: 3%;
+  padding-top: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: relative;
   top: -60px;
-  gap: 30px;
   background-color: #f4f4f4;
   border-radius: 40px 40px 0px 0px;
 }
@@ -59,9 +59,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 3%;
 }
 .restaurant__identity__name {
   font-family: shrikhand;
+  font-size: 20px;
 }
 .restaurant__identity__icon {
   position: relative;
@@ -73,9 +75,9 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background: transparent;
   color: grey;
   font-size: 24px;
+  opacity: 1;
 }
 .restaurant__identity__icon__modified {
   -webkit-background-clip: text;
@@ -88,11 +90,16 @@ main {
   background-size: 100% 200%;
   background-position: 0% 0%;
   font-size: 24px;
+  opacity: 0;
 }
 .restaurant__identity__icon:hover .restaurant__identity__icon__modified {
   animation-duration: 1s;
   animation-name: fillup;
   animation-fill-mode: forwards;
+  opacity: 1;
+}
+.restaurant__identity__icon:hover .restaurant__identity__icon__regular {
+  opacity: 0;
 }
 @keyframes fillup {
   0% {
@@ -109,15 +116,18 @@ main {
 }
 .restaurant__button {
   position: relative;
+  width: 52%;
+  height: 50px;
   z-index: 1;
   padding: 15px 20px;
   border: none;
   box-shadow: 2px 2px 5px #a9a9a9;
-  border-radius: 25px;
+  border-radius: 26px;
   background: linear-gradient(165deg, #FF79DA, #9356DC);
   color: #ffffff;
-  font-weight: bold;
-  width: 50%;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 15%;
   align-self: center;
 }
 .restaurant__button:hover::after {
@@ -130,7 +140,7 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: 25px;
+  border-radius: 26px;
   background: linear-gradient(165deg, #ff93e1, #a16be0);
   box-shadow: 3px 3px 8px #969696;
   opacity: 0;
@@ -140,35 +150,38 @@ main {
 
 .mealbox__title {
   position: relative;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
+  padding-inline: 3%;
 }
-
 .mealbox__title::after {
   content: "";
   background-color: #99E2D0;
   height: 4px;
-  width: 43px;
+  width: 45px;
   position: absolute;
   bottom: -4px;
-  left: 0;
+  left: 3%;
 }
 
 .meal {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   margin-top: 20px;
 }
-.meal__description {
-  text-overflow: ellipsis;
+.meal__name {
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .meal__choice {
-  min-width: 330px;
-  width: auto;
-  height: 70px;
+  height: 75px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -179,11 +192,12 @@ main {
   background-color: #ffffff;
 }
 .meal__choice__text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   width: 100%;
   align-self: center;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .meal__choice__price {
   width: 50px;
@@ -191,11 +205,37 @@ main {
   padding-bottom: 15px;
 }
 
+.delay__1 {
+  opacity: 0;
+  animation: move 0.7s 1 ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+.delay__2 {
+  opacity: 0;
+  animation: move 0.7s 1 ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+.delay__3 {
+  opacity: 0;
+  animation: move 0.7s 1 ease-in-out forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .animation {
   width: 0px;
   text-align: center;
   vertical-align: middle;
-  line-height: 70px;
+  line-height: 75px;
   background-color: #99E2D0;
   transition: width 0.6s ease-in-out;
 }
@@ -203,6 +243,7 @@ main {
   text-align: center;
   vertical-align: middle;
   color: white;
+  font-size: 25px;
   transition: transform 0s ease-in-out;
 }
 
@@ -212,7 +253,7 @@ main {
 }
 .meal__choice:hover .animation__icon {
   transform: rotate(1turn);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 body {
@@ -232,7 +273,7 @@ main {
   height: 100%;
   z-index: 3;
   background-color: rgba(244, 244, 244, 0.8);
-  animation: disapear 3s forwards;
+  animation: disapear 2s forwards;
 }
 
 .spinner::after {
@@ -277,41 +318,56 @@ main {
   text-align: center;
 }
 .header__logo {
-  width: 50%;
+  width: 45%;
 }
 
 .localisation {
   padding-inline: 3%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-block: 15px;
+  display: flex;
+  grid-gap: 4%;
+  justify-content: center;
   background-color: #e5e5e5;
-  text-align: center;
   font-size: 17px;
 }
 
 .intro {
-  padding: 25px 5%;
-  height: 200px;
+  height: 250px;
   background-color: #f4f4f4;
   text-align: center;
+  padding-bottom: 45px;
+}
+.intro__test {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 12% 30px 12%;
+  gap: 10px;
 }
 .intro__title {
   margin: 0;
+  font-size: 26px;
+  padding-inline: 1%;
 }
 .intro__text {
-  margin-bottom: 30px;
   color: #646363;
+  font-size: 18px;
 }
 .intro__button {
   position: relative;
+  width: 52%;
+  height: 50px;
   z-index: 1;
   padding: 15px 20px;
   border: none;
   box-shadow: 2px 2px 5px #a9a9a9;
-  border-radius: 25px;
+  border-radius: 26px;
   background: linear-gradient(165deg, #FF79DA, #9356DC);
   color: #ffffff;
-  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  width: 58%;
+  height: 54px;
 }
 .intro__button:hover::after {
   opacity: 1;
@@ -323,7 +379,7 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: 25px;
+  border-radius: 26px;
   background: linear-gradient(165deg, #ff93e1, #a16be0);
   box-shadow: 3px 3px 8px #969696;
   opacity: 0;
@@ -361,6 +417,9 @@ main {
   border-radius: 20px;
   box-shadow: 0 3px 10px #c4c3c3;
   background-color: #f4f4f4;
+}
+.step__box__text {
+  font-size: 17px;
 }
 .step__box__icon {
   width: 70px;
@@ -459,7 +518,6 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background: transparent;
   color: grey;
   font-size: 24px;
 }
@@ -515,8 +573,17 @@ main {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+
   .restaurant__flex {
     flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .meal__choice {
+    min-width: 200px;
   }
 }
 @media screen and (min-width: 1024px) {

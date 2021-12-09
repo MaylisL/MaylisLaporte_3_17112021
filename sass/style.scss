@@ -17,7 +17,7 @@ main {
     height: 100%;
     z-index: 3;
     background-color: rgba($color: #f4f4f4, $alpha: 0.8);
-    animation: disapear 3s forwards;
+    animation: disapear 2s forwards;
 }
 .spinner::after {
     content: "";
@@ -60,33 +60,46 @@ main {
     text-align: center;
     
     &__logo {
-       width: 50%;
+       width: 45%;
     }
 }
 .localisation {
     @include pding;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-block: 15px;
+    display: flex;
+    grid-gap: 4%;
+    justify-content: center;
     background-color: $medium-grey;
-    text-align: center;
     font-size: 17px;
 }
 .intro {
-    @include pding-ctnr;
-    height: 200px;
+    height: 250px;
     background-color: $grey;
     text-align: center;
+    padding-bottom: 45px;
+    
+    &__test {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 12% 30px 12%;
+        gap: 10px;
+    }
 
     &__title {
         margin: 0;
+        font-size: 26px;
+        padding-inline: 1%
     }
 
     &__text {
-        margin-bottom: 30px;
         color: rgb(100, 99, 99);
+        font-size: 18px;
     }
     &__button {
         @include btn-style;
+        width: 58%;
+        height: 54px;
         &:hover {
             &::after {
                 opacity:1;
@@ -130,6 +143,10 @@ main {
         box-shadow: 0 3px 10px #c4c3c3;
 
         background-color: $grey;
+
+        &__text {
+            font-size: 17px;
+        }
     
         &__icon {
             width: 70px;
