@@ -99,7 +99,7 @@ main {
     &__button {
         @include btn-style;
         padding: 17px 55px;
-        
+
         &:hover {
             &::after {
                 opacity:1;
@@ -257,7 +257,7 @@ main {
                 &__modified {
                     @include icon-modified;
                 }
-                &:hover &__modified {
+                &:hover &__modified, &:active &__modified {
                     @include icon-modified-hover;
                     opacity:1;
                 }

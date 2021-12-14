@@ -9,3 +9,14 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
+input {
+    padding: 0;
+    appearance: unset;
+    border: none;
+    box-sizing: unset;
+    background-color: transparent;
+}
+:focus-visible {
+    outline: none;
+}

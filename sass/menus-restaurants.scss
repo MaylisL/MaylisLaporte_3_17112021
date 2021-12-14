@@ -24,7 +24,7 @@
     
     &__icon {
         position: absolute;
-        left: 2%;
+        left: 5%;
     }   
     
 }
@@ -74,13 +74,14 @@ main {
             &__modified {
                 @include icon-modified;
             }
-            &:hover &__modified {
-                @include icon-modified-hover;
-                opacity:1;
-            }
             &:hover &__regular {
                 opacity:0;
             }
+            &:hover &__modified, &:active &__modified {
+                @include icon-modified-hover;
+                opacity:1;
+            }
+           
             @keyframes fillup {
                 0% { 
                     background-position: 0% 0%;

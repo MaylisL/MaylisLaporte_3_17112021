@@ -12,6 +12,18 @@ ul {
   padding: 0;
 }
 
+input {
+  padding: 0;
+  appearance: unset;
+  border: none;
+  box-sizing: unset;
+  background-color: transparent;
+}
+
+:focus-visible {
+  outline: none;
+}
+
 .header__menu {
   max-width: 1440px;
   margin: auto;
@@ -34,7 +46,7 @@ ul {
 }
 .header__menu__icon {
   position: absolute;
-  left: 2%;
+  left: 5%;
 }
 
 main {
@@ -98,14 +110,14 @@ main {
   opacity: 0;
   font-size: 24px;
 }
-.restaurant__identity__icon:hover .restaurant__identity__icon__modified {
+.restaurant__identity__icon:hover .restaurant__identity__icon__regular {
+  opacity: 0;
+}
+.restaurant__identity__icon:hover .restaurant__identity__icon__modified, .restaurant__identity__icon:active .restaurant__identity__icon__modified {
   animation-duration: 1s;
   animation-name: fillup;
   animation-fill-mode: forwards;
   opacity: 1;
-}
-.restaurant__identity__icon:hover .restaurant__identity__icon__regular {
-  opacity: 0;
 }
 @keyframes fillup {
   0% {
@@ -273,12 +285,18 @@ main {
   }
 
   .header__menu {
-    padding-block: 3%;
-    font-size: 35px;
+    padding-top: 2%;
+    padding-bottom: 0%;
+    font-size: 27px;
+  }
+  .header__menu__image {
+    width: 230px;
+    height: 52px;
   }
 
   .restaurant {
     border-radius: 60px 60px 0px 0px;
+    top: -60px;
   }
   .restaurant__identity {
     justify-content: center;
@@ -293,13 +311,26 @@ main {
   }
 }
 @media screen and (min-width: 1024px) {
+  .main__image {
+    max-height: 440px;
+    overflow: hidden;
+  }
+  .main__image img {
+    object-position: center -100px;
+  }
+
+  .header__menu {
+    padding-block: 1%;
+    font-size: 27px;
+  }
   .header__menu__image {
-    width: 295px;
+    width: 230px;
     height: 52px;
   }
 
   .restaurant {
     padding-inline: 2%;
+    top: -60px;
   }
   .restaurant__flex {
     align-items: unset;
@@ -595,7 +626,7 @@ main {
   opacity: 0;
   font-size: 24px;
 }
-.card__body__icon:hover .card__body__icon__modified {
+.card__body__icon:hover .card__body__icon__modified, .card__body__icon:active .card__body__icon__modified {
   animation-duration: 1s;
   animation-name: fillup;
   animation-fill-mode: forwards;
