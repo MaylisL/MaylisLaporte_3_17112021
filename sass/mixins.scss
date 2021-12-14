@@ -5,13 +5,13 @@
 
 @mixin btn-style {
     position: relative;
-    width:52%; 
-    height: 50px;
+    //width:52%; 
+    //height: 50px;
     z-index: 1;
-    padding: 15px 20px;
+    //padding: 17px 55px;
     border:none;
     box-shadow: 2px 2px 5px  #a9a9a9;
-    border-radius: 26px;
+    border-radius: 28px;
     background: linear-gradient(165deg,$secondary,$primary);
     color: #ffffff;
     font-size: 17px;
@@ -25,7 +25,7 @@
     right: 0;
     bottom: 0;  
     left: 0;
-    border-radius: 26px;
+    border-radius: 28px;
     background: linear-gradient(165deg, lighten($secondary,5%), lighten($primary,5%));
     box-shadow: 3px 3px 8px #969696;
     opacity: 0;
@@ -45,6 +45,7 @@
     top: 0;
     left: 0;
     color: grey;
+    opacity:1;
     font-size: 24px;
 }
 
@@ -58,6 +59,7 @@
     background-image: linear-gradient($grey 0%,$grey 50%,$secondary 50%,$primary 100%);
     background-size: 100% 200%;
     background-position: 0% 0%;
+    opacity: 0;
     font-size: 24px; 
 }
 
@@ -72,3 +74,4 @@
     animation: move 0.7s 1 ease-in-out forwards; 
     //cubic-bezier(.78,.14,.79,.98)
 }
+

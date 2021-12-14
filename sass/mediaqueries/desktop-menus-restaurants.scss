@@ -1,0 +1,46 @@
+@media screen and (min-width:1024px) {
+   
+    .header__menu {
+        
+        &__image {
+            width: 295px;
+            height: 52px;
+        }
+    }
+
+    .restaurant {
+    
+        padding-inline: 2%;
+
+        &__flex {
+            align-items: unset;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__button {
+            margin-top: 4%;
+            
+        }
+    }
+
+    .meal {
+    
+        &__choice {
+        max-width: 310px;
+        }
+
+        &__name {
+            font-size: 17px;
+        }
+
+        &__description {
+            font-size: 14px;
+        }
+
+        
+    }
+
+
+
+}

@@ -1,0 +1,34 @@
+@media screen and (min-width:768px) {
+    .body-menu {
+        width: 100%;
+        background-color: $darkest-grey;
+    }
+
+    .main {
+        border-radius: 0px 0px 60px 60px;
+    }
+
+    .header__menu {
+        padding-block: 3%;
+        font-size: 35px;
+    }
+
+    .restaurant {
+        border-radius: 60px 60px 0px 0px;
+
+        &__identity {
+        justify-content: center;
+        grid-gap: 7%;
+        }
+
+        &__flex {
+            align-items: center;
+        }
+    }
+
+    .meal {
+        &__choice {
+            width: 600px;
+        }
+    }
+}

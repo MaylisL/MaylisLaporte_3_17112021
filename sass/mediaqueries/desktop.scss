@@ -1,8 +1,52 @@
 @media screen and (min-width:1024px) {
     
-    .restaurant {
+    .intro {
+        height: 300px;
+        padding-bottom: 0;
+
+        &__test {
+            padding: 5% 12%;
+        }
+    }
+    
+    .functioning {
+        height: 250px;
+        padding: 25px 3%;
+    
+        &__box {
+            flex-direction: row;
+            justify-content: space-between;
+            gap:unset;
+            height: 165px;
+        }
+
+        &__title {
+            font-size: 26px;
+        }
+    }
+
+    .step {
+        width: 32%;
+    }
+    
+    .restaurants {
+
+        padding: 25px 3%;
+
         &__flex {
             flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 40px;
         }
+
+        &__title {
+            font-size: 26px;
+            margin-bottom: 6%;
+        }
+    }
+
+    .card {
+        width: 45%;
     }
 }

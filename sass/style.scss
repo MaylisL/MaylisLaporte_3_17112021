@@ -98,8 +98,8 @@ main {
     }
     &__button {
         @include btn-style;
-        width: 58%;
-        height: 54px;
+        padding: 17px 55px;
+        
         &:hover {
             &::after {
                 opacity:1;
@@ -116,7 +116,7 @@ main {
     background-color: white;
 
     &__title {
-        font-size: px;
+        font-size: 24px;
     }
 
     &__box {
@@ -165,9 +165,9 @@ main {
     }    
 
     &__number {
-        height: 20px;
-        width: 20px;
-        line-height: 20px;
+        height: 23px;
+        width: 23px;
+        line-height: 23px;
         position: relative;
         right: -10px;
        
@@ -218,21 +218,19 @@ main {
             position: relative;
            
             &::after {
-
-            content: "Nouveau";
-            position: absolute;
-            right:10px;
-            top: 10px;
-            width: 90px;
-            height: 30px;
-            line-height: 30px;
-            background-color: $tertiary;
-            border-radius: 2px;
-            font-size: 15px;
-            font-weight: 500;
-            color:#126e49;
-            text-align: center;
-             
+                content: "Nouveau";
+                position: absolute;
+                right:10px;
+                top: 10px;
+                width: 90px;
+                height: 30px;
+                line-height: 30px;
+                background-color: $tertiary;
+                border-radius: 2px;
+                font-size: 15px;
+                font-weight: 500;
+                color:#126e49;
+                text-align: center;
             }
         }
         &__body {
@@ -261,13 +259,19 @@ main {
                 }
                 &:hover &__modified {
                     @include icon-modified-hover;
+                    opacity:1;
+                }
+                &:hover &__regular {
+                    opacity:0;
                 }
                 @keyframes fillup {
-                    0% { background-position: 0% 0%;}
+                    0% { 
+                        background-position: 0% 0%;
+                    }
                     100% { 
                         background-position: 0% 100%;
                     }
-                }  
+                }
             }
         }
 }
@@ -279,22 +283,23 @@ main {
     padding-bottom: 20px;
     background-color: $darkest-grey;
     color:#ffffff;
-    font-size: $regular;
+    font-size: $large;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
     }
 
     &__icon {
-        width: 10px;
-        font-size: 11px;
+        width: 11px;
+        font-size: 12px;
     }
 
     &__box{
         display: flex;
         gap: 10px;
+        line-height: 12px;
     }
 
     &__logo {

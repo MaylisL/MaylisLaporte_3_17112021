@@ -1,16 +1,53 @@
 @media screen and (min-width:768px) {
     body {
         width: 100%;
+        background-color: $grey;
     }
-    .restaurant {
-        &__flex {
-            flex-direction: row;
-            flex-wrap: nowrap;
+
+    .main__home {
+        border-radius: 0px;
+    }
+
+    .intro {
+        &__test {
+            padding: 5% 12%;
         }
     }
-    .meal {
-        &__choice {
-            min-width: 200px;
+    
+    .header {
+        background-color: white;
+       
+        &__logo {
+            width: 295px;
+        }
+    }
+
+    .step {
+        &__box {
+            width: 95%;
+        }
+    }
+
+   .restaurants {
+       &__flex {
+        align-items: center;
+       }
+    }
+    .card {
+        width: 90%;   
+    }
+    .footer {
+        font-size: $xlarge;
+        text-align: center;
+        padding-block: 2%;
+
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        &__icon {
+            width: 15px;
+            font-size: 12px;
         }
     }
 }
