@@ -2,6 +2,12 @@
     max-width: 1440px;
     margin: auto;
 }
+@mixin header-style {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    text-align: center;
+    background-color: white;
+}
 
 @mixin btn-style {
     position: relative;

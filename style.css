@@ -29,15 +29,16 @@ input {
   margin: auto;
   padding-top: 3%;
   padding-bottom: 2%;
-  align-content: center;
+  text-align: center;
+  background-color: white;
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: white;
-  font-size: 1.25em;
+  font-size: 20px;
 }
 .header__menu__image {
   width: 44%;
+  max-width: 230px;
 }
 .header__menu__image img {
   width: 100%;
@@ -328,8 +329,6 @@ main {
   }
 
   .header__menu {
-    padding-top: 3%;
-    padding-bottom: 2%;
     font-size: 27px;
   }
   .header__menu__image {
@@ -358,11 +357,6 @@ main {
   }
   .meal__description {
     font-size: 14px;
-  }
-
-  .footer {
-    margin: auto;
-    max-width: 1440px;
   }
 }
 body {
@@ -421,13 +415,14 @@ main {
 .header {
   max-width: 1440px;
   margin: auto;
-  padding-inline: 3%;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 3%;
+  padding-bottom: 2%;
   text-align: center;
+  background-color: white;
 }
 .header__logo {
   width: 45%;
+  max-width: 230px;
 }
 
 .localisation {
@@ -685,9 +680,8 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    width: 100%;
-    background-color: #f4f4f4;
+  .body {
+    background-color: white;
   }
 
   .main__home {
@@ -698,11 +692,9 @@ main {
     padding: 5% 12%;
   }
 
-  .header {
-    background-color: white;
-  }
   .header__logo {
-    width: 295px;
+    width: 230px;
+    height: 40px;
   }
 
   .step__box {
@@ -724,7 +716,8 @@ main {
   }
   .footer__wrapper {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    grid-gap: 4%;
   }
   .footer__icon {
     width: 15px;

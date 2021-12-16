@@ -54,15 +54,14 @@ main {
 }
 .header {
     @include maxwidth;
-    @include pding;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
+    @include header-style;
     
     &__logo {
        width: 45%;
+       max-width: 230px;
     }
 }
+
 .localisation {
     @include pding;
     padding-block: 15px;
