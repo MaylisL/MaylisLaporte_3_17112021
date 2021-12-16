@@ -43,7 +43,8 @@
 
         &__wrapper {
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
+            grid-gap: 4%;
         }
         &__icon {
             width: 15px;

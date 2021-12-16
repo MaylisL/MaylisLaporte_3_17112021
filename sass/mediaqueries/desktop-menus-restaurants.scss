@@ -1,22 +1,30 @@
 @media screen and (min-width:1024px) {
    
-    .main__image {
+    .body-menu {
+        background-color: white;
+    }
+    .main {
+        background-color:$grey;
+        border-radius: unset;
         
-        max-height: 440px;
-        overflow: hidden;
+        &__image {
+            max-height: 480px;
+            
+            & img {
+                object-position: center -100px;
         
-        & img {
-            object-position: center -100px;
-    
+            }
         }
     }
+        
     .header__menu {
-        padding-block: 1%;
+        padding-top: 3%;
+        padding-bottom: 2%;
         font-size: 27px;
 
         &__image {
             width: 230px;
-            height: 52px;
+            height: 40px;
         }
     }
     .restaurant {
@@ -51,6 +59,10 @@
         }
 
         
+    }
+    .footer {
+        margin: auto;
+        max-width: 1440px;
     }
 
 

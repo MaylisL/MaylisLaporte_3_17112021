@@ -4,21 +4,22 @@
 
 .header__menu {
     @include maxwidth;
-    padding-inline: 5%;
-    padding-top: 4%;
+    padding-top: 3%;
     padding-bottom: 2%;
-    align-items: center;
-    height: 52px;
+    align-content: center;
     display: flex;
     justify-content: center;
-    grid-gap: 20%;
+    position: relative;
     background-color: white;
     font-size: 1.25em;
-   
+
     &__image {
-       width: 48%;
-       & img {
+        width: 44%;
+
+        & img {
            width: 100%;
+           object-fit: cover;
+
        }
     }
     

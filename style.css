@@ -27,22 +27,21 @@ input {
 .header__menu {
   max-width: 1440px;
   margin: auto;
-  padding-inline: 5%;
-  padding-top: 4%;
+  padding-top: 3%;
   padding-bottom: 2%;
-  align-items: center;
-  height: 52px;
+  align-content: center;
   display: flex;
   justify-content: center;
-  grid-gap: 20%;
+  position: relative;
   background-color: white;
   font-size: 1.25em;
 }
 .header__menu__image {
-  width: 48%;
+  width: 44%;
 }
 .header__menu__image img {
   width: 100%;
+  object-fit: cover;
 }
 .header__menu__icon {
   position: absolute;
@@ -283,15 +282,17 @@ main {
   .main {
     border-radius: 0px 0px 60px 60px;
   }
+  .main__image {
+    max-height: 400px;
+    overflow: hidden;
+  }
 
   .header__menu {
-    padding-top: 2%;
-    padding-bottom: 0%;
     font-size: 27px;
   }
   .header__menu__image {
     width: 230px;
-    height: 52px;
+    height: 40px;
   }
 
   .restaurant {
@@ -311,21 +312,29 @@ main {
   }
 }
 @media screen and (min-width: 1024px) {
+  .body-menu {
+    background-color: white;
+  }
+
+  .main {
+    background-color: #f4f4f4;
+    border-radius: unset;
+  }
   .main__image {
-    max-height: 440px;
-    overflow: hidden;
+    max-height: 480px;
   }
   .main__image img {
     object-position: center -100px;
   }
 
   .header__menu {
-    padding-block: 1%;
+    padding-top: 3%;
+    padding-bottom: 2%;
     font-size: 27px;
   }
   .header__menu__image {
     width: 230px;
-    height: 52px;
+    height: 40px;
   }
 
   .restaurant {
@@ -349,6 +358,11 @@ main {
   }
   .meal__description {
     font-size: 14px;
+  }
+
+  .footer {
+    margin: auto;
+    max-width: 1440px;
   }
 }
 body {
