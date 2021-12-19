@@ -45,7 +45,6 @@ main {
     justify-content: space-around;
     position: relative;
     top: -60px;
-    //gap: 30px;
     background-color: $grey;
     border-radius: 40px 40px 0px 0px;
     
@@ -116,7 +115,7 @@ main {
 .mealbox {
     &__title {
         position: relative;
-        font-size: $large;
+        font-size: 16px;
         font-weight: 400;
         padding-inline: 3%;
 
@@ -180,7 +179,7 @@ main {
         }
         
     }
-}
+} 
 .delay {
     &__1 {
         @include moving;
@@ -195,11 +194,9 @@ main {
         animation-delay: 1.7s;
     }
 }
-
 @keyframes move {
     0% {transform:translateY(80px);
     opacity: 0;}
-    //50% {opacity:1;}
     100% {transform:translateY(0px);
     opacity:1;}
 }
@@ -218,8 +215,7 @@ main {
         color: white;
         font-size: 25px;
         transition: transform 0s ease-in-out;
-    }
-    
+    }  
 }
 .meal__choice:hover .animation {
     width: 100px;

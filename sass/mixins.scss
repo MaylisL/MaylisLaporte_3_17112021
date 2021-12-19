@@ -2,6 +2,15 @@
     max-width: 1440px;
     margin: auto;
 }
+
+@mixin pding {
+    padding-inline: 3%;
+}
+
+@mixin pding-ctnr {
+    padding: 25px 5%; 
+}
+
 @mixin header-style {
     padding-top: 3%;
     padding-bottom: 2%;
@@ -9,6 +18,7 @@
     background-color: white;
 }
 
+// START style des boutons //
 @mixin btn-style {
     position: relative;
     z-index: 1;
@@ -34,13 +44,10 @@
     z-index: -1;
     transition: opacity 250ms;
 }
-@mixin pding {
-    padding-inline: 3%;
-}
+// END style des boutons //
 
-@mixin pding-ctnr {
-    padding: 25px 5%; 
-}
+
+// START heart icon style //
 @mixin icon-regular {
     z-index: 2;
     position:absolute;
@@ -70,10 +77,13 @@
     animation-name: fillup;
     animation-fill-mode: forwards;
 }
+// END heart icon style //
 
+
+// START animation menu delay //
 @mixin moving {
     opacity:0;
-    animation: move 0.7s 1 ease-in-out forwards; 
-    //cubic-bezier(.78,.14,.79,.98)
+    animation: move 0.7s 1 ease-in-out forwards;
 }
+// END animation menu delay //
 

@@ -8,7 +8,7 @@
     }
 
     .intro {
-        &__test {
+        &__wrapper {
             padding: 5% 12%;
         }
     }
@@ -36,7 +36,7 @@
         width: 90%;   
     }
     .footer {
-        font-size: $xlarge;
+        font-size: 18px;
         text-align: center;
         padding-block: 2%;
 
