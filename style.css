@@ -738,14 +738,6 @@ main {
     object-position: center -100px;
   }
 
-  .header__menu {
-    font-size: 27px;
-  }
-  .header__menu__image {
-    width: 230px;
-    height: 40px;
-  }
-
   .restaurant {
     padding-inline: 2%;
     top: -60px;
